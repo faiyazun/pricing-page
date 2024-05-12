@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pricing - Coding Power</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(250, 100, 200, 0.1);
+    margin-bottom: 30px;
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color:#ffff99;
+    border-radius: 50px;
+}
+
+.card-title h2 {
+    margin: 80;
+}
+
+.card-title p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.card-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-content ul li {
+    margin-bottom: 10px;
+}
+
+.card-content ul li i {
+    margin-right: 10px;
+}
+
+.card-content button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-content button:hover {
+    background-color: #0056b3;
+}
+
+.card-content button a {
+    color: #fff;
+    text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+    .container{
+      flex-direction:column;
+    }
+  }
+</style>
+</head>
+<body>
+    
+   <div class="container">
+       <div class="card" onmouseenter="add(this)" onmouseleave="remove(this)">
+           <div class="card-title">
+               <h2>Basic</h2>
+               <p><i class="fa fa-rupee"></i><Span>99</Span>/month</p>
+           </div>
+           <div class="card-content">
+               <ul>
+                   <li><i class="fa fa-check-circle"></i>1 Website</li>
+                   <li><i class="fa fa-check-circle"></i>5 Gb Storage</li>
+                   <li><i class="fa fa-check-circle"></i>1 Database</li>
+                   <li><i class="fa fa-times-circle"></i>Free Domain</li>
+                   <li><i class="fa fa-times-circle"></i>Professional Email</li>
+                   <li><i class="fa fa-times-circle"></i>24/7 Support</li>
+               </ul>
+               <button onclick="buynow('plan')"><a href="#">Buy Now</a></button>
+           </div>
+       </div>
+       <div class="card" onmouseenter="add(this)" onmouseleave="remove(this)">
+           <div class="card-title">
+               <h2>Standard</h2>
+               <p><i class="fa fa-rupee"></i><Span>199</Span>/month</p>
+           </div>
+           <div class="card-content">
+               <ul>
+                   <li><i class="fa fa-check-circle"></i>10 Website</li>
+                   <li><i class="fa fa-check-circle"></i>25 Gb Storage</li>
+                   <li><i class="fa fa-check-circle"></i>10 Database</li>
+                   <li><i class="fa fa-times-circle"></i>Free Domain</li>
+                   <li><i class="fa fa-check-circle"></i>Professional Email</li>
+                   <li><i class="fa fa-check-circle"></i>24/7 Support</li>
+               </ul>
+               <button onclick="buynow('plan')"><a href="#">Buy Now</a></button>
+           </div>
+       </div>
+       <div class="card" onmouseenter="add(this)" onmouseleave="remove(this)">
+           <div class="card-title">
+               <h2>Premium</h2>
+               <p><i class="fa fa-rupee"></i><Span>299</Span>/month</p>
+           </div>
+           <div class="card-content">
+               <ul>
+                   <li><i class="fa fa-check-circle"></i>Unlimited Website</li>
+                   <li><i class="fa fa-check-circle"></i>5 Gb Storage</li>
+                   <li><i class="fa fa-check-circle"></i>Unlimited Database</li>
+                   <li><i class="fa fa-check-circle"></i>Free Domain</li>
+                   <li><i class="fa fa-check-circle"></i>Professional Email</li>
+                   <li><i class="fa fa-check-circle"></i>24/7 Support</li>
+               </ul>
+               <button onclick="buynow('plan')"><a href="#">Buy Now</a></button>
+           </div>
+       </div>
+   </div>
+
+</body>
+<script>
+    function add(element) {
+      element.style.margin = '-10px -5px -10px -5px';
+    element.style.boxShadow = '0 0 10px white'; // Add box shadow
+  }
+  
+  function remove(element) {
+    element.style.margin = '0'; 
+    element.style.boxShadow = 'none'; // Remove box shadow
+  }
+  function buynow(plan) {
+    alert(`You have purchased your choosen ${plan}`);
+  }
+  </script>
+</html>
